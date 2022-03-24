@@ -25,7 +25,7 @@ downloadArtifact({
   force: process.env.force_no_cache === 'true',
   cacheRoot: process.env.electron_config_cache,
   platform: process.env.npm_config_platform || process.platform,
-  arch: process.env.npm_config_arch || process.arch
+  arch: 'x64'
 }).then(extractFile).catch(err => {
   console.error(err.stack)
   process.exit(1)
